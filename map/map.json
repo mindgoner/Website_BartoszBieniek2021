@@ -1,0 +1,82 @@
+{
+	"default": {
+		"author": "Bartosz Bieniek",
+		"firstScene": "lobby",
+		"sceneFadeDuration": 1000
+	},
+	"scenes": {
+		"lobby": {
+			"title": "MindGoner Galaxy",
+			"panorama": "./lobby.jpg",
+			"hotSpots": [
+				{
+					"pitch": -7.5,
+					"yaw": 13,
+					"type": "info",
+					"text": "<div class='pnlm-header'>👋<br />Welcome Commander</div><br />Use mouse to navigate<br /> through my little galaxy!<br /><br />Have fun exploring the stars!<br /><br />Sincerely, Bartosz Bieniek"
+				},
+				{
+					"pitch": -18,
+					"yaw": 48.25,
+					"type": "info",
+					"text": "<div class='pnlm-header'>PZ2 SOMSIT</div>\nVirtual Tour",
+					"URL": "http://pz2.edu.pl/panorama"
+				},
+				{
+					"pitch": 16.5,
+					"yaw": 40,
+					"type": "info",
+					"text": "<div class='pnlm-header'>Serwis Pro</div>\nComplaint Management System",
+					"URL": "http://serwispro.eu/"
+				},
+				{
+					"pitch": -13,
+					"yaw": -46,
+					"type": "info",
+					"text": "<div class='pnlm-header'>🐱<br />My GitHub</div>\nLet's do a code review!",
+					"URL": "http://github.com/mindgoner/"
+				},
+				{
+					"pitch": -5,
+					"yaw": -110,
+					"type": "info",
+					"text": "<div class='pnlm-header'>Minerva AI</div>\nMany Uses Artificial Intelligence",
+					"URL": "http://www.facebook.com/minerva.ai.39"
+				},{
+					"pitch": 7.5,
+					"yaw": -167,
+					"type": "info",
+					"text": "<div class='pnlm-header'>Apartian</div>\nSmall Business Room Rent System",
+					"URL": "https://www.facebook.com/apartianmanagement"
+				},
+				{
+					"pitch": 13,
+					"yaw": 134,
+					"type": "info",
+					"text": "<div class='pnlm-header'>YouTube</div>\nIt's better than a Netflix!",
+					"URL": "https://www.youtube.com/channel/UC0REAI5IO0qyQ1Pt4Jel48Q"
+				},
+				{
+					"pitch": -6,
+					"yaw": 159.5,
+					"type": "info",
+					"text": "<div class='pnlm-header'>Teampree (soon)</div>\nCompany Management System"
+				},
+				{
+					"pitch": 10.5,
+					"yaw": 102,
+					"type": "info",
+					"text": "<div class='pnlm-header'>Repled's Portfolio</div>\nDesigner that I co-op with 💪",
+					"URL": "https://www.behance.net/repled"
+				},
+				{
+					"pitch": 6,
+					"yaw": -20.5,
+					"type": "info",
+					"text": "<div class='pnlm-header'>ALMI Broker</div>\nInsurance Broker Personal Website",
+					"URL": "http://almibroker.pl/"
+				}
+			]
+		}
+	}
+}

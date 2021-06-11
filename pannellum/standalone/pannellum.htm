@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pannellum</title>
+  <link type="text/css" rel="Stylesheet" href="../css/pannellum.css"/>
+  <link type="text/css" rel="Stylesheet" href="standalone.css"/>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <link type="text/css" rel="Stylesheet" href="/css/default.css"/>
+</head>
+<body>
+<div id="container">
+  <noscript>
+    <div class="pnlm-info-box">
+      <p>Javascript is required to view this panorama.<br>(It could be worse; you could need a plugin.)</p>
+    </div>
+  </noscript>
+</div>
+<script type="text/javascript" src="../js/libpannellum.js"></script>
+<script type="text/javascript" src="../js/pannellum.js"></script>
+<script type="text/javascript" src="standalone.js"></script>
+<script>
+  function displayText(text, i){
+      i++;
+      $("#inserterMsg").html(text.substring(0,i));
+      setTimeout(function(){
+        if(i<text.length){
+          displayText(text, i);
+        }else{
+          setTimeout(function(){
+            $("#inserterMsg").children("b").css("color", "#f00");
+            setTimeout(function(){
+              text = "<br /><br /><span id='winss'>&gt; CLICK ME &lt;</span>";
+              waveIns(0.3);
+              $("#inserterMsg").append(text);
+            }, 500);
+          }, 500);
+          
+        }
+      },35);
+  }
+  window.waveInsLoop = true;
+  function waveIns(opa){
+    $("#winss").css("opacity", opa);
+    if(window.waveInsLoop){
+      setTimeout(function(){
+        if(opa == 0.3){
+          waveIns(1);
+        }else{
+          waveIns(0.3);
+        }
+      }, 1500);
+    }
+  }
+
+  $(document).ready(function(){
+    $(".pnlm-dragfix").mousemove(function(e) {
+        var width = $(this).innerWidth();
+        var height = $(this).innerHeight();
+        var newValueX = (e.pageX / width) * pixelToMove;
+        var newValueY = (e.pageY / height) * pixelToMove;
+        $(".pnlm-container").css('background-position', newValueX + '%' + ' ' + newValueY + '%');
+    });
+    setTimeout(function(){
+      messages = [
+        "Cont<b></b>rary to popular <b>belief</b><br />I know <b>exactly</b> wh<b></b>at I am doing.",
+        "Wake up, <b>Programmer</b>!<br />We got a <b>code</b> to write."
+      ];
+      mess = messages[Math.floor(Math.random() * messages.length)];
+      displayText(mess, 0);
+      
+    }, 10);
+  });
+
+  
+</script>
+</body>
+</html>
